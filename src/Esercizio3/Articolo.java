@@ -9,23 +9,30 @@ public class Articolo {
     private double price;
     private int pieces;
 
-    public Articolo() {
+    public Articolo(String description, double price, int pieces) {
         Random random = new Random();
         this.codArticle = random.nextInt(1, 100);
-        this.description = "";
-        this.price = 0;
-        this.pieces = 0;
+        this.description = description;
+        this.price = price;
+        this.pieces = pieces;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+
+    public double getPrice() {
+        return price;
     }
 
     public void setPrice(double price) {
         this.price = price;
     }
 
-    public void setPieces(int pieces) {
-        this.pieces = pieces;
+    @Override
+    public String toString() {
+        return "Articolo: " +
+                " codArticle = " + codArticle +
+                ", description = '" + description + '\'' +
+                ", price = " + price +
+                ", piece = " + pieces
+                ;
     }
 }

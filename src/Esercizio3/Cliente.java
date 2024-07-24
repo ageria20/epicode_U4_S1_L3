@@ -1,6 +1,6 @@
 package Esercizio3;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Random;
 
 public class Cliente {
@@ -9,34 +9,27 @@ public class Cliente {
     private String name;
     private String surname;
     private String email;
-    private LocalDateTime subDate;
+    private Date subDate;
 
-    public Cliente(String name, String surname) {
+
+    public Cliente(String name, String surname, String email) {
         Random random = new Random();
         this.codCliente = random.nextInt(1, 100);
         this.name = name;
         this.surname = surname;
-        this.email = "";
-        this.subDate = LocalDateTime.now();
+        this.email = email;
+        this.subDate = new Date();
     }
 
-    public int getCodCliente() {
-        return codCliente;
-    }
 
-    public LocalDateTime getSubDate() {
-        return subDate;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getEmail() {
-        return email;
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "codCliente=" + codCliente +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", email='" + email + '\'' +
+                ", subDate=" + subDate +
+                '}';
     }
 }
