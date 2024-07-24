@@ -19,7 +19,7 @@ public class Sim {
         System.out.println("Il numero di telefono e': " + this.cellNum);
         System.out.println("Il credito e': " + this.credit + "€");
         System.out.println("Le ultime chiamate sono': " + Arrays.toString(this.call));
-        if (call.length > 0) {
+        if (call != null) {
             for (int i = 0; i < call.length; i++) {
                 System.out.println(call[i]);
             }
