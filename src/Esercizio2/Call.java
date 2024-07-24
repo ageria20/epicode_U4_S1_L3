@@ -5,12 +5,12 @@ import java.util.Random;
 public class Call {
 
     private int minutes;
-    private long calledNumber;
+    private String calledNumber;
 
     public Call(int calledNumber) {
         Random random = new Random();
         this.minutes = random.nextInt();
-        this.calledNumber = calledNumber;
+        this.calledNumber = Long.toString(calledNumber);
     }
 
 
